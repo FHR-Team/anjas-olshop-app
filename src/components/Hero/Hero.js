@@ -8,7 +8,7 @@ function Hero() {
     <div className="container mt-4">
       <div className="row">
         <div className="col-12 d-block d-md-none">
-          <img src={imgHero} alt="image hero" className="img-fluid" />
+          <img src={imgHero} alt="hero" className="img-fluid" />
         </div>
         <div className="col-md-6 d-flex align-items-center">
           <div className="mt-5 mt-md-0">
@@ -21,7 +21,7 @@ function Hero() {
           </div>
         </div>
         <div className="col-md-6 d-none d-md-block">
-          <img src={imgHero} alt="image hero" className="img-fluid" />
+          <img src={imgHero} alt="hero" className="img-fluid" />
         </div>
       </div>
     </div>
