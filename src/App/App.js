@@ -25,6 +25,9 @@ function App() {
             <Route exact path="/cart" component={Cart}></Route>
             <Route path="*" component={NotFound}></Route>
           </Switch>
+          <p className="mt-5 mb-3 small text-center text-muted">
+            &copy; 2021 by <a href="/" className="link-success text-decoration-none">FHR-Team</a> all rights reserved.
+          </p>
         </main>
       </div>
     </BrowserRouter>
