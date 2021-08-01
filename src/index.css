@@ -1,3 +1,11 @@
+:root {
+  --color-green: #00BFA6;
+}
+
 #root {
   font-family: 'Montserrat', sans-serif;
+}
+
+.bg-green, .btn.btn-success {
+  background-color: var(--color-green);
 }

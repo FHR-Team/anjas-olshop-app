@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Navbar as BNav, Container, Nav, Badge } from 'react-bootstrap';
+import { Navbar as BNav, Container, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import logo from '../../logo.svg';
@@ -20,7 +20,7 @@ function Navbar() {
           </Nav>
           <Nav className="ms-auto">
             <NavLink to="/cart" className="nav-link">
-              Cart <FontAwesomeIcon icon={['fas', 'shopping-bag']} /> <span className="badge bg-success">0</span>
+              Cart <FontAwesomeIcon icon={['fas', 'shopping-bag']} /> <span className="badge bg-green">0</span>
             </NavLink>
           </Nav>
         </BNav.Collapse>
