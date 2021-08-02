@@ -6,7 +6,7 @@ import ProductList from '../../components/ProductList/ProductList';
 
 import './Home.css';
 
-function Home() {
+function Home(props) {
   return (
     <div className="Home">
       <Hero />
@@ -18,7 +18,7 @@ function Home() {
           </Link>
         </div>
       </div>
-      <ProductList isHome={true} />
+      <ProductList isHome={true} products={props.products} />
     </div>
   );
 }
