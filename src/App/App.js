@@ -18,7 +18,7 @@ function App() {
       price: 123456,
       desc: "Lorem ipsum dolor sit amet",
       stock: 20,
-      image: "https://via.placeholder.com/128x64"
+      image: "https://via.placeholder.com/1280x640?text=foto+produk"
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ function App() {
       price: 123456,
       desc: "Lorem ipsum dolor sit amet",
       stock: 20,
-      image: "https://via.placeholder.com/128x64"
+      image: "https://via.placeholder.com/1280x640?text=foto+produk"
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ function App() {
       price: 123456,
       desc: "Lorem ipsum dolor sit amet",
       stock: 20,
-      image: "https://via.placeholder.com/128x64"
+      image: "https://via.placeholder.com/1280x640?text=foto+produk"
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ function App() {
       price: 123456,
       desc: "Lorem ipsum dolor sit amet",
       stock: 20,
-      image: "https://via.placeholder.com/128x64"
+      image: "https://via.placeholder.com/1280x640?text=foto+produk"
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ function App() {
       price: 123456,
       desc: "Lorem ipsum dolor sit amet",
       stock: 20,
-      image: "https://via.placeholder.com/128x64"
+      image: "https://via.placeholder.com/1280x640?text=foto+produk"
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ function App() {
       price: 123456,
       desc: "Lorem ipsum dolor sit amet",
       stock: 20,
-      image: "https://via.placeholder.com/128x64"
+      image: "https://via.placeholder.com/1280x640?text=foto+produk"
     }
   ];
   
