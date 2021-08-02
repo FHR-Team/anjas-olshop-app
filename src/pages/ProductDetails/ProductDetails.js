@@ -7,7 +7,7 @@ import './ProductDetails.css';
 const FindProduct = (products, productId) => {
   for (let i in products) {
     const e = products[i];
-    if (e.id == productId) {
+    if (parseInt(e.id) === parseInt(productId)) {
       return e;
     }
   }
@@ -26,10 +26,10 @@ function ProductDetails(props) {
     if (input<=0||input>product.stock) {
       if (input < 0) {
         alert('Jumlah tidak boleh negatif!');
-      } else if(input == 0) {
-        alert('Silahkan masukkan jumlah pesanan');
       } else if(input > product.stock) {
         alert('Jumlah tidak boleh melebihi stok barang!');
+      } else {
+        alert('Silahkan masukkan jumlah pesanan');
       }
     } else {
       history.push(`/cart?add=${product.id}&cnt=${input}`);
