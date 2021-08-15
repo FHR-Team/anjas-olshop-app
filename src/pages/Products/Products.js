@@ -14,7 +14,7 @@ function Products(props) {
           <li className="breadcrumb-item active" aria-current="page">Products</li>
         </ol>
       </nav>
-      <ProductList products={props.products}/>
+      <ProductList/>
     </div>
   );
 }

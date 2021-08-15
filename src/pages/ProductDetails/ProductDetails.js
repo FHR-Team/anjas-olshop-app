@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
+import { useSelector, shallowEqual } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NotFound from '../NotFound/NotFound';
 import './ProductDetails.css';
@@ -14,11 +15,14 @@ const FindProduct = (products, productId) => {
   return null;
 }
 
-function ProductDetails(props) {
+function ProductDetails() {
+  const selectProducts = (state) => state.products.map((product) => product);
+  const products = useSelector(selectProducts, shallowEqual);
+
   const [input, setInput] = useState('');
   let { productId } = useParams();
   let history = useHistory();
-  let product = FindProduct(props.products, productId);
+  let product = FindProduct(products, productId);
 
   const handleSubmit = e => {
     e.preventDefault();

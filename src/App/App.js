@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
+import fetchProducts from '../api/client';
 import Navbar from '../components/Navbar/Navbar';
 
 import Home from '../pages/Home/Home';
@@ -11,57 +13,14 @@ import NotFound from '../pages/NotFound/NotFound';
 import './App.css';
 
 function App() {
-  const PRODUCTS = [
-    {
-      id: 1,
-      name: "Produk 1",
-      price: 123456,
-      desc: "Lorem ipsum dolor sit amet",
-      stock: 20,
-      image: "https://via.placeholder.com/1280x640?text=foto+produk"
-    },
-    {
-      id: 2,
-      name: "Produk 2",
-      price: 123456,
-      desc: "Lorem ipsum dolor sit amet",
-      stock: 20,
-      image: "https://via.placeholder.com/1280x640?text=foto+produk"
-    },
-    {
-      id: 3,
-      name: "Produk 3",
-      price: 123456,
-      desc: "Lorem ipsum dolor sit amet",
-      stock: 20,
-      image: "https://via.placeholder.com/1280x640?text=foto+produk"
-    },
-    {
-      id: 4,
-      name: "Produk 4",
-      price: 123456,
-      desc: "Lorem ipsum dolor sit amet",
-      stock: 20,
-      image: "https://via.placeholder.com/1280x640?text=foto+produk"
-    },
-    {
-      id: 5,
-      name: "Produk 5",
-      price: 123456,
-      desc: "Lorem ipsum dolor sit amet",
-      stock: 20,
-      image: "https://via.placeholder.com/1280x640?text=foto+produk"
-    },
-    {
-      id: 6,
-      name: "Produk 6",
-      price: 123456,
-      desc: "Lorem ipsum dolor sit amet",
-      stock: 20,
-      image: "https://via.placeholder.com/1280x640?text=foto+produk"
-    }
-  ];
-  
+  const dispatch = useDispatch();
+  fetchProducts().then((item) => {
+    dispatch({type: 'products/productClear', payload: item});
+    item.forEach(e => {
+      dispatch({type: 'products/productAdd', payload: e});
+    });
+  });
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -69,13 +28,13 @@ function App() {
         <main className="container">
           <Switch>
             <Route exact path="/">
-              <Home products={PRODUCTS}/>
+              <Home/>
             </Route>
             <Route exact path="/products">
-              <Products products={PRODUCTS}/>
+              <Products/>
             </Route>
             <Route path="/products/:productId">
-              <ProductDetails products={PRODUCTS} />
+              <ProductDetails/>
             </Route>
             <Route exact path="/cart" component={Cart}></Route>
             <Route path="*" component={NotFound}></Route>

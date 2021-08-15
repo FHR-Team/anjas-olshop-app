@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './ProductList.css';
 
-function Product(props) {
+function ProductItem(props) {
   return (
     <div className="col-md-4 my-3">
       <div className="card border-0 rounded-lg shadow">
@@ -22,17 +23,19 @@ function Product(props) {
 }
 
 function ProductList(props) {
-  let createProductsElement = product => <Product product={product} key={product.name}/>;
+  const products = useSelector(state => state.products);
+
+  let createProductsElement = p => <ProductItem product={p} key={p.id}/>;
   if (props.isHome) {
     return (
       <div className="row">
-        {props.products.slice(0,3).map(createProductsElement)}
+        {products.slice(0,3).map(createProductsElement)}
       </div>
     );
   } else {
     return (
       <div className="row">
-        {props.products.map(createProductsElement)}
+        {products.map(createProductsElement)}
       </div>
     );
   }
