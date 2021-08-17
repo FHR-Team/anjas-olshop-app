@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { Navbar as BNav, Container, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import logo from '../../assets/icon.svg';
 
 function Navbar() {
+  const cartCount = useSelector(state => state.carts).length;
+
   return (
     <BNav bg="white" expand="lg">
       <Container>
@@ -20,7 +23,9 @@ function Navbar() {
           </Nav>
           <Nav className="ms-auto">
             <NavLink to="/cart" className="nav-link">
-              Cart <FontAwesomeIcon icon={['fas', 'shopping-bag']} /> <span className="badge bg-green">0</span>
+              Cart&nbsp;
+              <FontAwesomeIcon icon={['fas', 'shopping-bag']} />&nbsp;
+              <span className="badge bg-green">{cartCount}</span>
             </NavLink>
           </Nav>
         </BNav.Collapse>

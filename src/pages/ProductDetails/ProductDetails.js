@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NotFound from '../NotFound/NotFound';
+import priceFormatter from '../../utils/priceFormatter';
 import './ProductDetails.css';
 
 const FindProduct = (products, productId) => {
@@ -22,6 +23,7 @@ function ProductDetails() {
   const [input, setInput] = useState('');
   let { productId } = useParams();
   let history = useHistory();
+  let dispatch = useDispatch();
   let product = FindProduct(products, productId);
 
   const handleSubmit = e => {
@@ -36,7 +38,22 @@ function ProductDetails() {
         alert('Silahkan masukkan jumlah pesanan');
       }
     } else {
-      history.push(`/cart?add=${product.id}&cnt=${input}`);
+      try {
+        const addCart = {
+          id: Date.now(),
+          idProduct: product.id,
+          image: product.image,
+          name: product.name,
+          count: input,
+          price: product.price
+        };
+
+        dispatch({type: 'carts/cartAdd', payload: addCart});
+        history.push(`/cart`);
+      } catch (err) {
+        console.error(err);
+        alert('Terjadi kesalahan saat menambah ke keranjang, silahkan coba lagi');
+      }
     }
   }
 
@@ -64,7 +81,7 @@ function ProductDetails() {
           </div>
           <div className="col-md-6">
             <h2 className="fw-bold">{product.name}</h2>
-            <p className="mb-0">Rp. {product.price}</p>
+            <p className="mb-0">{priceFormatter(product.price)}</p>
             <p>Stock: {product.stock}</p>
             <p>{product.desc}</p>
             <hr/>

@@ -40,7 +40,7 @@ function App() {
             <Route path="*" component={NotFound}></Route>
           </Switch>
           <p className="mt-5 mb-3 small text-center text-muted">
-            &copy; 2021 by <a href="https://github.com/FHR-Team" target="_blank" rel="noreferrer" className="link-success text-decoration-none">FHR-Team</a> all rights reserved.
+            &copy; 2021 by <a href="https://harisfi.github.io/about/" target="_blank" rel="noreferrer" className="link-success text-decoration-none">Haris</a> from <a href="https://github.com/FHR-Team" target="_blank" rel="noreferrer" className="link-success text-decoration-none">FHR-Team</a> all rights reserved.
           </p>
         </main>
       </div>
