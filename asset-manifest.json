@@ -1,27 +1,21 @@
 {
   "files": {
-    "main.css": "/anjas-olshop-app/static/css/main.0193ca3e.chunk.css",
+    "main.css": "/anjas-olshop-app/static/css/main.5d193f3a.chunk.css",
     "main.js": "/anjas-olshop-app/static/js/main.5b28ca09.chunk.js",
-    "main.js.map": "/anjas-olshop-app/static/js/main.5b28ca09.chunk.js.map",
     "runtime-main.js": "/anjas-olshop-app/static/js/runtime-main.5cf29ea8.js",
-    "runtime-main.js.map": "/anjas-olshop-app/static/js/runtime-main.5cf29ea8.js.map",
-    "static/css/2.d54dd6bb.chunk.css": "/anjas-olshop-app/static/css/2.d54dd6bb.chunk.css",
+    "static/css/2.6b06e4a5.chunk.css": "/anjas-olshop-app/static/css/2.6b06e4a5.chunk.css",
     "static/js/2.1969f90b.chunk.js": "/anjas-olshop-app/static/js/2.1969f90b.chunk.js",
-    "static/js/2.1969f90b.chunk.js.map": "/anjas-olshop-app/static/js/2.1969f90b.chunk.js.map",
     "static/js/3.83e98a4e.chunk.js": "/anjas-olshop-app/static/js/3.83e98a4e.chunk.js",
-    "static/js/3.83e98a4e.chunk.js.map": "/anjas-olshop-app/static/js/3.83e98a4e.chunk.js.map",
     "index.html": "/anjas-olshop-app/index.html",
-    "static/css/2.d54dd6bb.chunk.css.map": "/anjas-olshop-app/static/css/2.d54dd6bb.chunk.css.map",
-    "static/css/main.0193ca3e.chunk.css.map": "/anjas-olshop-app/static/css/main.0193ca3e.chunk.css.map",
     "static/js/2.1969f90b.chunk.js.LICENSE.txt": "/anjas-olshop-app/static/js/2.1969f90b.chunk.js.LICENSE.txt",
     "static/media/hero.a576cfeb.svg": "/anjas-olshop-app/static/media/hero.a576cfeb.svg",
     "static/media/icon.80fcc8c0.svg": "/anjas-olshop-app/static/media/icon.80fcc8c0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5cf29ea8.js",
-    "static/css/2.d54dd6bb.chunk.css",
+    "static/css/2.6b06e4a5.chunk.css",
     "static/js/2.1969f90b.chunk.js",
-    "static/css/main.0193ca3e.chunk.css",
+    "static/css/main.5d193f3a.chunk.css",
     "static/js/main.5b28ca09.chunk.js"
   ]
 }

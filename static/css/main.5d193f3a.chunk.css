@@ -1,0 +1,1 @@
+:root{--color-green:#00bfa6}#root{font-family:"Montserrat",sans-serif}.bg-green,.btn.btn-success{background-color:#00bfa6;background-color:var(--color-green)}.card-img-tops{border-top-left-radius:calc(1rem - 1px);border-top-right-radius:calc(1rem - 1px);width:100%}.rounded-lg{border-radius:1rem!important}
