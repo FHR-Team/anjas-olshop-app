@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.css';
 
 function Cart() {
+  document.title = 'Cart | Anjas Olshop';
   return (
     <div className="Cart">
       <h1 className="mt-4 mb-1">Keranjang <strong>Saya</strong></h1>

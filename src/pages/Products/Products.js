@@ -3,6 +3,7 @@ import ProductList from '../../components/ProductList/ProductList';
 import './Products.css';
 
 function Products(props) {
+  document.title = 'Products | Anjas Olshop';
   return (
     <div className="Products">
       <h1 className="mt-4 mb-1">Daftar <strong>Produk</strong></h1>

@@ -7,6 +7,7 @@ import ProductList from '../../components/ProductList/ProductList';
 import './Home.css';
 
 function Home() {
+  document.title = 'Home | Anjas Olshop';
   return (
     <div className="Home">
       <Hero />

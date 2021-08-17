@@ -41,6 +41,7 @@ function ProductDetails() {
   }
 
   if (product) {
+    document.title = `${product.name} | Anjas Olshop`;
     return (
       <div className="ProductDetails">
         <h1 className="mt-4 mb-1">Pesan Produk</h1>
