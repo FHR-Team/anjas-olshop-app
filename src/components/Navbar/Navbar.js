@@ -2,13 +2,13 @@ import { NavLink } from 'react-router-dom';
 import { Navbar as BNav, Container, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import logo from '../../logo.svg';
+import logo from '../../assets/icon.svg';
 
 function Navbar() {
   return (
     <BNav bg="white" expand="lg">
       <Container>
-        <NavLink to="/" className="navbar-brand">
+        <NavLink to="/" className="navbar-brand d-flex align-items-center">
           <img src={logo} alt="" width="30" height="24" />
           Anjas Olshop
         </NavLink>
